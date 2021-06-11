@@ -6,9 +6,8 @@ from routers.books import books
 
 app = FastAPI()
 
-# app.include_router(recommendation_route.router)
 app.include_router(books.router)
-
+app.include_router(recommendation_route.router)
 
 @app.get("/")
 async def root():
